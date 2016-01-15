@@ -1,0 +1,46 @@
+<!doctype html>
+<head>
+  <title>layout-position5.html</title>
+  <style>
+    body { 
+      padding: 0; 
+      margin: 0;
+    }
+    
+    div {
+      box-sizing: border-box;
+      border: 1px solid black;
+      width: 100px; height: 100px;
+      float: left;
+    }
+    
+    #container {
+      position: absolute;
+      width: 300px;
+      top: 50px;
+      bottom: 50px;
+      left: 50px;
+      height: initial;
+    }
+    
+    #test {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-color: red;
+      top: 0;
+      right: 0;
+    }
+    
+  </style>
+<head>
+
+<body>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div id="container">
+    <div id="test"></div>
+  </div>
+</body>
+</html>

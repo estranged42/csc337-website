@@ -1,0 +1,38 @@
+<!doctype html>
+<head>
+  <title>layout-position2.html</title>
+  <style>
+    * { box-sizing: border-box; }
+    section {
+      width: 480px;
+      margin: 0 auto;
+      border: 1px solid black;
+    }
+    div { /* Formatting */
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin: 10px;
+      height: 100px;
+      width: 100px;
+      background-color: gray;
+      color: white;
+      font-weight: bold;
+      font-family: sans-serif;
+      font-size; 1.2em;
+    }
+    .box2 {
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      background-color: purple;
+    }
+  </style>
+<head>
+
+<body>
+  <section>
+  <div>One</div><div class="box2">Two</div><div>Three</div><div>Four</div>
+  </section>
+</body>
+</html>

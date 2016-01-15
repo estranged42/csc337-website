@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>Sandbox</title>
+	</head>
+	<body>
+		<script>
+
+function IpStrToBin(ip) {
+  var d = ip.split('.');
+  return ((((((+d[0])*256)+(+d[1]))*256)+(+d[2]))*256)+(+d[3]);
+}
+
+function IpBinToStr(num) {
+  var d = num%256;
+  for (var i = 3; i > 0; i--) 
+  { 
+      num = Math.floor(num/256);
+      d = num%256 + '.' + d;
+  }
+  return d;
+}
+
+ip = IpStrToBin("10.20.3.4")
+console.log( ip );
+console.log( IpBinToStr(ip) );
+
+
+		</script>
+	</body>
+</html>

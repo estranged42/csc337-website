@@ -1,0 +1,23 @@
+<!doctype html>
+<head>
+  <title>js/events.html</title>
+  <link rel="stylesheet" type="text/css" 
+                    href="getElements.css" />
+</head>
+
+<body>
+  <div id="main">
+    <div id="first" class="item">First Block</div>
+    <div id="second" class="item">Second Block</div>
+    <div id="third" class="item">Third Block</div>
+  </div>
+
+  <script>
+    clickCount = 0;
+    d1 = document.getElementById('first');
+    d1.addEventListener('click', function() {
+      console.log("Clicked " + ++clickCount + " times.");
+    });
+  </script>
+</body>
+</html>

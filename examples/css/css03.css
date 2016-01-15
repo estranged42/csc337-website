@@ -1,0 +1,12 @@
+article {
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  background-color: #CCC;
+  padding: 0.5em;
+}
+
+header {
+  border-bottom: 2px dotted #222;
+}
+

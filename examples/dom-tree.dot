@@ -1,0 +1,30 @@
+digraph G {
+    nodesep=0.1;
+    ranksep=0.5;
+    margin=0.1;
+    node [shape=box];
+    
+    html [fontname="Courier"];
+    head [fontname="Courier"];
+    title [fontname="Courier"];
+    body [fontname="Courier"];
+    p1 [label="p", fontname="Courier"];
+    p2 [label="p", fontname="Courier"];
+    li1 [label="li", fontname="Courier"];
+    li2 [label="li", fontname="Courier"];
+    ul [fontname="Courier"];
+
+    html -> head;
+    html -> body;
+    head -> title;
+    title -> "\"Lorem ipsum\"";
+    body -> p1;
+    p1 -> "\"Lorem ipsum...\"";
+    body -> p2;
+    p2 -> "\"consectetur...\"";
+    body -> ul;
+    ul -> li1;
+    li1 -> "\"sed do...\"";
+    ul -> li2;
+    li2 -> "\"tempor...\"";
+  }

@@ -1,0 +1,47 @@
+body {
+  background-color: #cfe0d8;
+  font-family: sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+#books {
+  background-color: #076873;
+  padding: 1em;
+  width: 500px;
+  margin: 0 auto;
+}
+
+#book-table {
+  background-color: #84d2e2;
+  width: 100%;
+  margin-bottom: 1em;
+  height: auto;
+  transition: height 0.5s ease-out;
+}
+
+tr.newrow {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+th, td {
+  padding: 0.5em;
+}
+
+#book-button {
+  margin: 0;
+  padding: 10px;
+  font-size: 1.2em;
+}
+
+@keyframes fadein {
+ 	0% {
+ 		opacity: 0
+ 	}
+ 	100% {
+ 		opacity: 1;
+ 	}
+}

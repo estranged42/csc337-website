@@ -1,0 +1,22 @@
+<!doctype html>
+<head>
+  <title>js/timeout.html</title>
+  <link rel="stylesheet" type="text/css" 
+                    href="timeout.css" />
+</head>
+
+<body>
+  <div id="main">0</div>
+
+  <script>
+    var counter = function() {
+      var d = document.getElementById('main');
+      var curCount = Number(d.textContent);
+      curCount++;
+      d.textContent = curCount.toString();
+    }
+    
+    window.setTimeout(counter, 1000);
+  </script>
+</body>
+</html>

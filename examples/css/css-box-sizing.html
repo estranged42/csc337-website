@@ -1,0 +1,26 @@
+<!doctype html>
+<head>
+  <title>css-box-sizing.html</title>
+  <style>
+    div {
+      width: 500px;
+      padding: 25px;
+      border: 10px solid blue;
+      margin: 25px;
+      background-color: #888;
+      color: white;
+    }
+    .b1 {
+      box-sizing: content-box;
+    }
+    .b3 {
+      box-sizing: border-box;
+    }
+  </style>
+<head>
+
+<body>
+  <div class="b1">Content is 500px Wide, 25px Padding, 10px Border</div>
+  <div class="b3">Box is 500px Wide, 25px Padding, 10px Border</div>
+</body>
+</html>

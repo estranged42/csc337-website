@@ -1,0 +1,25 @@
+<!doctype html>
+<head>
+  <title>layout.html</title>
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+<script>
+
+$( document ).ready(function() {
+  var $api = "http://ttt.workbench.uits.arizona.edu/ttt.php?cmd=login";
+
+  function handleLogin(data) {
+    $('.box1').text(data.message);
+  }
+
+  $.ajax($api).done(handleLogin);
+});
+
+</script>
+
+<head>
+
+<body>
+  <div class="box1"></div> 
+</body>
+</html>

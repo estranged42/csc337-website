@@ -1,0 +1,67 @@
+[05-Oct-2014 18:22:50 America/Phoenix] PHP Notice:  Undefined variable: iscomplete in /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/variables.php on line 5
+[05-Oct-2014 18:23:15 America/Phoenix] PHP Notice:  Undefined variable: iscomplete in /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/variables.php on line 5
+[05-Oct-2014 18:41:02 America/Phoenix] PHP Parse error:  parse error in php shell code on line 1
+[05-Oct-2014 18:41:22 America/Phoenix] PHP Warning:  PDO::__construct() expects at least 1 parameter, 0 given in php shell code on line 1
+[05-Oct-2014 18:42:06 America/Phoenix] PHP Warning:  fopen() expects at least 2 parameters, 1 given in php shell code on line 1
+[05-Oct-2014 18:42:13 America/Phoenix] PHP Warning:  fopen(tmp.txt): failed to open stream: No such file or directory in php shell code on line 1
+[14-Nov-2014 10:12:14 America/Phoenix] PHP Parse error:  parse error in /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/wsod.php on line 7
+[17-Nov-2014 09:41:48 America/Phoenix] PHP Warning:  fopen(dictionary_english): failed to open stream: No such file or directory in /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/make_wordlist.php on line 3
+[17-Nov-2014 09:41:48 America/Phoenix] PHP Warning:  fgets() expects parameter 1 to be resource, boolean given in /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/make_wordlist.php on line 6
+[17-Nov-2014 09:41:48 America/Phoenix] PHP Fatal error:  Call to undefined function close() in /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/make_wordlist.php on line 18
+[17-Nov-2014 09:42:08 America/Phoenix] PHP Warning:  fopen(dictionary_english): failed to open stream: No such file or directory in /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/make_wordlist.php on line 3
+[17-Nov-2014 09:42:08 America/Phoenix] PHP Warning:  fgets() expects parameter 1 to be resource, boolean given in /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/make_wordlist.php on line 6
+[17-Nov-2014 09:42:08 America/Phoenix] PHP Fatal error:  Call to undefined function close() in /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/make_wordlist.php on line 18
+[17-Nov-2014 09:42:36 America/Phoenix] PHP Warning:  fopen(dictionary_english): failed to open stream: No such file or directory in /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/make_wordlist.php on line 3
+[17-Nov-2014 09:42:36 America/Phoenix] PHP Warning:  fgets() expects parameter 1 to be resource, boolean given in /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/make_wordlist.php on line 6
+[17-Nov-2014 09:42:36 America/Phoenix] PHP Fatal error:  Call to undefined function close() in /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/make_wordlist.php on line 19
+[17-Nov-2014 09:42:59 America/Phoenix] PHP Fatal error:  Call to undefined function close() in /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/make_wordlist.php on line 19
+[17-Nov-2014 09:43:34 America/Phoenix] PHP Fatal error:  Call to undefined function close() in /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/make_wordlist.php on line 22
+[17-Nov-2014 09:44:49 America/Phoenix] PHP Fatal error:  Call to undefined function close() in /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/make_wordlist.php on line 26
+[23-Nov-2014 18:24:52 America/Phoenix] PHP Notice:  Undefined variable: heightpx in /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/string_quotes.php on line 5
+[23-Nov-2014 18:25:49 America/Phoenix] PHP Notice:  Undefined variable: heightpx in /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/string_quotes.php on line 7
+[23-Nov-2014 18:26:02 America/Phoenix] PHP Notice:  Undefined variable: heightpx in /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/string_quotes.php on line 8
+[23-Nov-2014 18:26:20 America/Phoenix] PHP Notice:  Undefined variable: heightpx in /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/string_quotes.php on line 8
+[30-Nov-2014 16:23:01 America/Phoenix] PHP Fatal error:  Call to undefined function class_name() in /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/inheritance.php on line 12
+[30-Nov-2014 16:23:20 America/Phoenix] PHP Fatal error:  Call to undefined function class_name() in /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/inheritance.php on line 12
+[30-Nov-2014 16:23:43 America/Phoenix] PHP Fatal error:  Call to undefined function class_name() in /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/inheritance.php on line 12
+[30-Nov-2014 16:24:00 America/Phoenix] PHP Fatal error:  Call to undefined function class_name() in /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/inheritance.php on line 12
+[30-Nov-2014 16:24:06 America/Phoenix] PHP Fatal error:  Call to undefined function class_name() in /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/inheritance.php on line 12
+[30-Nov-2014 16:24:10 America/Phoenix] PHP Fatal error:  Call to undefined function class_name() in /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/inheritance.php on line 12
+[30-Nov-2014 21:40:17 America/Phoenix] PHP Fatal error:  Cannot access protected property astromechDroid::$name in /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/visibility.php on line 31
+[30-Nov-2014 21:40:31 America/Phoenix] PHP Fatal error:  Cannot access protected property astromechDroid::$name in /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/visibility.php on line 33
+[30-Nov-2014 21:41:03 America/Phoenix] PHP Fatal error:  Cannot access protected property astromechDroid::$name in /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/visibility.php on line 34
+[30-Nov-2014 22:03:00 America/Phoenix] PHP Parse error:  parse error, expecting `"variable (T_VARIABLE)"' in /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/static.php on line 4
+[30-Nov-2014 22:03:15 America/Phoenix] PHP Parse error:  parse error, expecting `"variable (T_VARIABLE)"' in /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/static.php on line 6
+[30-Nov-2014 22:03:24 America/Phoenix] PHP Parse error:  parse error, expecting `"variable (T_VARIABLE)"' in /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/static.php on line 6
+[30-Nov-2014 22:03:47 America/Phoenix] PHP Parse error:  parse error, expecting `"variable (T_VARIABLE)"' in /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/static.php on line 6
+[30-Nov-2014 22:03:59 America/Phoenix] PHP Parse error:  parse error, expecting `"variable (T_VARIABLE)"' in /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/static.php on line 6
+[30-Nov-2014 22:04:21 America/Phoenix] PHP Parse error:  parse error, expecting `"variable (T_VARIABLE)"' in /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/static.php on line 6
+[30-Nov-2014 22:05:14 America/Phoenix] PHP Parse error:  parse error, expecting `"variable (T_VARIABLE)"' in /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/static.php on line 6
+[03-Dec-2014 08:52:46 America/Phoenix] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Connection refused' in /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/object_lib.php:7
+Stack trace:
+#0 /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/object_lib.php(7): PDO->__construct('mysql:dbname=cs...', 'root', 'bitnami')
+#1 {main}
+  thrown in /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/object_lib.php on line 7
+[03-Dec-2014 08:54:06 America/Phoenix] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Connection refused' in /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/object_lib.php:7
+Stack trace:
+#0 /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/object_lib.php(7): PDO->__construct('mysql:dbname=cs...', 'root', 'bitnami')
+#1 {main}
+  thrown in /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/object_lib.php on line 7
+[03-Dec-2014 09:01:03 America/Phoenix] PHP Warning:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2000] mysqlnd cannot connect to MySQL 4.1+ using the old insecure authentication. Please use an administration tool to reset your password with the command SET PASSWORD = PASSWORD('your_existing_password'). This will store a new, and more secure, hash value in mysql.user. If this user is used in other scripts executed by PHP 5.2 or earlier you might need to remove the old-passwords flag from your my.cnf file' in /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/object_lib.php:6
+Stack trace:
+#0 /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/object_lib.php(6): PDO->__construct('mysql:dbname=fi...', 'fischerm_test', 'FNuRq9MYnVpXPnn...')
+#1 php shell code(1): include('/Users/markfisc...')
+#2 {main}
+  thrown in /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/object_lib.php on line 6
+[03-Dec-2014 09:05:34 America/Phoenix] PHP Warning:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2000] mysqlnd cannot connect to MySQL 4.1+ using the old insecure authentication. Please use an administration tool to reset your password with the command SET PASSWORD = PASSWORD('your_existing_password'). This will store a new, and more secure, hash value in mysql.user. If this user is used in other scripts executed by PHP 5.2 or earlier you might need to remove the old-passwords flag from your my.cnf file' in /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/object_lib.php:6
+Stack trace:
+#0 /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/object_lib.php(6): PDO->__construct('mysql:dbname=fi...', 'fischerm_test', 'FNuRq9MYnVpXPnn...')
+#1 php shell code(1): include('/Users/markfisc...')
+#2 {main}
+  thrown in /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/object_lib.php on line 6
+[03-Dec-2014 09:05:53 America/Phoenix] PHP Warning:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2000] mysqlnd cannot connect to MySQL 4.1+ using the old insecure authentication. Please use an administration tool to reset your password with the command SET PASSWORD = PASSWORD('your_existing_password'). This will store a new, and more secure, hash value in mysql.user. If this user is used in other scripts executed by PHP 5.2 or earlier you might need to remove the old-passwords flag from your my.cnf file' in /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/object_lib.php:6
+Stack trace:
+#0 /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/object_lib.php(6): PDO->__construct('mysql:dbname=fi...', 'fischerm_test', 'FNuRq9MYnVpXPnn...')
+#1 php shell code(1): include('/Users/markfisc...')
+#2 {main}
+  thrown in /Users/markfischer/Dropbox/Classes/CS 337/website/examples/php/object_lib.php on line 6

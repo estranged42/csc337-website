@@ -1,0 +1,26 @@
+<!doctype html>
+<head>
+  <title>css-specificity.html</title>
+  <style>
+    body { color: black; }
+    li p { color: red; }
+    div ul li p { color: purple; }
+    #homeTab { color: blue; }
+    div.content ul.tabs p { color: green; }
+    body div.content ul li p { color: orange; }
+  </style>
+<head>
+
+<body>
+  <div class="content">
+    <ul class="tabs">
+      <li id="homeTab">
+        <header>Home</header>
+        <p>
+          The Home Screen
+        <p>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

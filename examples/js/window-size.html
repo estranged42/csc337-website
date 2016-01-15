@@ -1,0 +1,24 @@
+<!doctype html>
+<head>
+  <title>js/window-size.html</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" type="text/css" 
+                    href="window-size.css" />
+</head>
+
+<body>
+  <div id="widthDisplay" class="display">0</div>
+  <div id="heightDisplay" class="display">0</div>
+
+  <script>
+  var updateWindowSize = function() {
+    var widthDisplay = document.getElementById('widthDisplay');
+    var heightDisplay = document.getElementById('heightDisplay');
+    widthDisplay.textContent = window.innerWidth.toString();
+    heightDisplay.textContent = window.innerHeight.toString();
+  };
+  updateWindowSize();
+  window.addEventListener('resize', updateWindowSize);
+  </script>
+</body>
+</html>

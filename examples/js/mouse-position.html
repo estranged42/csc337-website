@@ -1,0 +1,32 @@
+<!doctype html>
+<head>
+  <title>js/mouse-position.html</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" type="text/css" 
+                    href="window-size.css" />
+</head>
+
+<body>
+  <div id="mouseLoc" class="display">0,0</div>
+
+  <script>
+  var updateMouseLoc = function(e) {
+    var mouseLoc = document.getElementById('mouseLoc');
+    posX = window.event.clientX;
+    posY = window.event.clientY;
+    var loc = posX + "," + posY;
+    mouseLoc.textContent = loc;
+  };
+  var updateTouchLoc = function(e) {
+    var mouseLoc = document.getElementById('mouseLoc');
+    var touchLoc = e.changedTouches[0];
+    posX = touchLoc.clientX;
+    posY = touchLoc.clientY;
+    var loc = posX + "," + posY;
+    mouseLoc.textContent = loc;
+  };
+  window.addEventListener('mousemove', updateMouseLoc);
+  window.addEventListener('touchmove', updateTouchLoc);
+  </script>
+</body>
+</html>
