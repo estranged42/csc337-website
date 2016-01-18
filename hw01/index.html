@@ -1,0 +1,226 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>CS 337 Web Programming - Homework Assignment 01</title>
+</head>
+
+<body>
+
+<h1>CS 337 - Web Programming - Homework Assignment0 1</h1>
+
+<p>
+This assignment is worth a total of 100 points.
+</p>
+
+<p>
+Text is a major part of web programming.  Reading text, writing text, parsing text, regular expressions, text transformations, it goes on and on.
+</p>
+
+<p>
+This assignment will focus on text and HTML. Be sure to read all the problems so that you don't get hung up on the first problem.  The other problems are shorter and you might want to finish them first and get them out of the way.
+</p>
+
+<h3>Instructions for all problems</h3>
+
+<ol>
+  <li>There will be additional instructions numbered like this for the individual problems.  Be sure to follow all the instructions!
+  <li>All HTML documents submitted should pass a validation check from <a href="http://validator.w3.org">http://validator.w3.org</a>. If your document does not validate, you must include a text document (validation.txt) explaining why it does not validate, and convince me that it should still be accepted.
+  <li>All HTML documents should be HTML5 unless otherwise specified.
+</ol>
+
+<h3>Resource Files</h3>
+
+<p>
+The files you will need to complete this assignment are <a href="files">located in this files folder</a>.
+</p>
+
+<h2>Problem 1, Play HTML: 50 points</h2>
+
+<p>
+You are to take the text from a portion of Shakespeare's "A Midsummer Night's Dream", and add links to a Character Glossary page. There should be two HTML files, one named "index.html" and one named "characters.html".  The index.html file will contain the text of the play, and will contain links to the Character descriptions in the glossary page, characters.html.
+</p>
+
+<h3>The Character's Glossary</h3>
+
+<p>
+First take the text from <code><strong>characters.txt</strong></code> and build an HTML page.  Build an HTML table containing the characters, with columns for name, description, and an image.  Images are provided for Theseus and Oberon/Titania.  You should try and find other images for the other characters.
+</p>
+
+<ol>
+  <li>The glossary file should be named <code><strong>characters.html</strong></code>
+  <li>Images should be about 200px high, so that they're all about the same size on the page.
+  <li>Images must be attributed to their proper source.  If its your image, say its yours!
+  <li>Accessibility considerations will be checked.
+  <li>We have not discussed CSS styles yet, so a sample style sheet - <code><strong>style.css</strong></code> - is provided for you, so that tables and things don't look too terrible. This style sheet should be linked to both index.html and character.html. We may not have covered linking style sheets in class yet, so look up the <code><strong>&lt;link&gt;</strong></code> element syntax for referencing an external stylesheet.
+</ol>
+
+<p>
+The final characters page should look similar to the following:
+</p>
+
+<figure>
+<img src="characters.html.png" alt="Image of characters.html document">
+</figure>
+
+<h3>The Play</h3>
+
+<p>
+Here is a sample of the text of the play:
+</p>
+
+<figure>
+<img src="play_text.png" alt="Sample text from the play, from file dream.txt" style="width: 400px;">
+</figure>
+
+
+<p>
+Each word in all capitals  is a character in the play.  Each of these words should become a link to the correct character in the glossary page. These character links <strong>must use targeted page fragments to target exactly the row</strong> in the character's table in characters.html.
+</p>
+
+<h4>Parsing Text Files</h4>
+
+<p>
+There is a short section of a play in the files folder. Take this text, and create a well formed HTML document containing the text of the play, along with links to the <code><strong>characters.html</strong></code> file.  Your input file will be <code><strong>dream.txt</strong></code> and your output file will be <code><strong>index.html</strong></code>
+</p>
+
+<ol>
+  <li>Character names in all capitals starting a block of text, such as THESEUS, must be turned into clickable links that link to that character's row in characters.html.
+  <li>The block of text following a character's name should be slightly indented. Remember, we don't have CSS yet, so do this only with HTML elements.
+  <li>The title of the play should be a large heading at the top of the page.
+  <li>The scene and act should be a lesser heading.
+</ol>
+
+<p>
+The final index.html page should look similar to this:
+</p>
+
+<figure>
+<img src="index.html.png" alt="Image of index.html file">
+</figure>
+
+<h4>Bonus - Write a program to do this</h4>
+There's a lot of text, even for this very short section of the play. Rather than doing a ton of copy &amp; pasting, write a program to read in the text of dream.txt, and output index_program.html from your program.
+
+
+<h2>Problem 2, DOM: 15 points</h2>
+
+<p>
+In the files folder for this assignment is an HTML file named <code><strong>dom.html</strong></code>. Draw the DOM tree for this HTML document, similar to the one shown during class 
+</p>
+
+<ol>
+  <li>Your DOM tree image should be saved to a file named <code><strong>dom.png</strong></code> and turned in with the rest of your files.
+  <li>Scans of hand drawn images will not be accepted. Figure out some way to draw the tree in a graphics program.
+    <ul>
+      <li>Free online tools, such as <a href="http://draw.io">Draw.io</a>
+      <li>Photoshop and Illustrator are available in OSCR labs on campus
+      <li>Gimp and Inkscape are free open source graphics programs
+      <li>Graphviz command line tools - also free and open source
+      <li>Omnigraffle - Mac only, very good but not free :(
+      <li>Visio - Windows only, also not free but maybe part of campus licensing?
+      <li>Hard-code an SVG image if you're really adventurous!
+    </ul>
+</ol>
+
+<h2>Problem 3, Character References: 10 points</h2>
+
+<h3>Character References</h3>
+
+<p>
+Select 3 HTML Character References, and display them in a table.  Create a new HTML file called <code><strong>char_refs.html</strong></code> for this problem. The resulting HTML file should look similar to the following:
+</p>
+
+<figure>
+<img src="char_refs.html.png" alt="Image of char_refs.html file" width="300">
+</figure>
+
+<ol>
+  <li><strong>Note:</strong> pick different character references than mine!
+</ol>
+
+<h2>Problem 4, Mimic: 15 points</h2>
+
+<p>
+Create a new HTML file called <code><strong>mimic.html</strong></code> for this problem. Look at the image called <a href="files/mimic.gif">mimic.gif</a> in the files folder.
+Create an HTML document that matches this PDF. 
+</p>
+
+<ol>
+  <li>There is a pagebreak in the PDF file, but there will not be a page break in your HTML document.
+  <li>Remember, your document should contain <strong>NO CSS</strong>. This can all be done with HTML elements and their attributes.
+</ol>
+
+<h2>Problem 5, HTTP: 10 points</h2>
+
+<p>
+What HTTP request might have been sent to get the following response? Create a new text file called <code><strong>http.txt</strong></code> that contains your answer for this question.
+</p>
+
+<code>
+<pre>
+HTTP/1.1 404 Not Found
+Server: nginx
+Content-Type: text/html; charset=utf-8
+Keep-Alive: timeout=10
+Etag: "1409594856-1"
+X-Content-Type-Options: nosniff
+X-Frame-Options: SameOrigin
+Content-Language: en
+X-UA-Compatible: IE=Edge,chrome=1
+Link: &lt;http://www.arizona.edu/&gt;; rel="canonical",&lt;http://www.arizona.edu/&gt;; rel="shortlink"
+Cache-Control: public, max-age=21600
+Last-Modified: Mon, 01 Sep 2014 18:07:36 +0000
+Expires: Sun, 19 Nov 1978 05:00:00 GMT
+Date: Mon, 01 Sep 2014 18:07:37 GMT
+X-Varnish: 1864218493
+Age: 0
+Via: 1.1 varnish
+Connection: keep-alive
+Vary: Cookie, Accept-Encoding
+X-Cache: MISS
+X-Node: appstack-prod-231.dubstep.arizona.edu
+Set-Cookie: BIGipServerArizona.edu_Site.app~Arizona.edu_Site_pool=3880750090.20480.0000; path=/
+Set-Cookie: bbbbbbbbbbbbbbb=OLBAFEHKEPPGCCJMMAMOFAFKKCBIDAOBOGOMHHGKJFIDIOIGLLCBOLDCMFLAKCONNFKENIDIOJOKKMGHJLAGNOCLBMAKDKBIPDFJIDDLFPBJJOJNLMMCAGFIABOINDJK; HttpOnly
+Set-Cookie: f5_cspm=1234;
+Transfer-Encoding: chunked
+</pre>
+</code>
+
+<h2>Homework Submission</h2>
+
+<p>
+You should create a folder holding your files, and zip it up for submission.  Name your folder and zip file something descriptive like Your-Name-HW1.zip or something. 
+</p>
+
+<h3>File List</h3>
+<ul>
+  <li>characters.html
+  <li>index.html
+  <li>style.css
+  <li>dom.png
+  <li>char_refs.html
+  <li>mimic.html
+  <li>http.txt
+  <li><em>any other image files for your characters.html file</em>
+  <li>validation.txt <em>(optional - only if a document fails to validate, and you think you have a valid reason why)</em>
+</ul>
+
+<h3>Test Your Submissions!!</h3>
+
+<p>
+I've had many past submissions where its obvious that things worked correctly on your computer, but the links, paths, etc did NOT work in the version that was submitted.  We will do our best to determine if errors were simple ones, but we'll still mark off for solutions that do not work from the submitted files.
+</p>
+
+<p>
+After preparing your .ZIP file, copy it to a new location, better yet a new computer, and make sure that when you un-zip it, everything still works!
+</p>
+
+<p>
+Homeworks Zip files will be submitted to D2L, in the "Homework 1" dropbox.
+</p>
+
+</body>
+
+
+</html>
