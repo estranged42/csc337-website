@@ -1,0 +1,131 @@
+/**
+ * problem1.css
+ *
+ * You will be adding new rules to this file in order to alter the way that problem1.html looks
+ * when viewed in a web browser.  Please add rules for each of the 5 parts to the designated
+ * section.
+ */
+
+/* Defaults - Leave this section alone. */
+
+article::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.clearfix {
+  clear: both;
+}
+
+/* Part a */
+
+??? {
+    font-family: sans-serif;
+    background-color: #84d2e2;
+}
+
+
+
+
+/* Part b */
+
+??? { 
+    background-color: white;
+    height: 180px;
+    margin: 0 auto;
+    padding: 25px;
+}
+
+
+
+
+/* Part c */
+
+??? {
+    float: right;
+}
+
+
+
+/* Part d */
+
+??? {
+    box-sizing: border-box;
+    display: block;
+    width: 400px;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid grey;
+    background-color: white;
+}
+
+
+
+/* Part e */
+
+a {
+    font-weight: bold;
+}
+
+
+
+
+/* Part f */
+
+??? {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Part g */
+
+??? {
+    width: 60px;
+    border-radius: 5px;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+
+/* Part h */
+
+??? {
+    clear: both;
+}
+
+
+/* Part i */
+
+??? {
+    display: inline;
+    padding: 0 10px;
+}
+
+
+/* Part j */
+
+??? {
+  font-size: 0.6em;
+}
+
+
+
+/* Part k */
+
+??? {
+  display: inline;
+  padding: 10px;
+  float: right;
+}
+
+
+/* Part l */
+
+??? {
+  text-decoration: none;
+}
+
+

@@ -1,0 +1,376 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>CS 337 Web Programming - Homework Assignment 2</title>
+  <link rel="stylesheet" type="text/css" href="../document.css" />
+</head>
+
+<body>
+
+<div id="content">
+
+<h1>CS 337 - Web Programming - Homework Assignment 2</h1>
+
+<article>
+  <p>
+  This assignment is worth a total of 100 points.
+  </p>
+
+  <p>
+  CSS is the primary means we use today to make our HTML documents look the way we want, or more often, the way the designers we'll work with want the pages to look.
+  </p>
+
+  <p>
+  This assignment will focus on transforming the look of some existing HTML, particularly focusing on how to target specific HTML elements, while avoiding others.
+  </p>
+
+  <h3>Instructions for all problems</h3>
+
+  <ol>
+    <li>There will be additional instructions numbered like this for the individual problems.  Be sure to follow all the instructions!
+  </ol>
+
+  <h3>Resource Files</h3>
+
+  <p>
+  The files you will need to complete this assignment are <a href="files">located in this files folder</a>.
+  </p>
+</article>
+
+<article>
+  <h2>Problem 1 - 40 points</h2>
+
+  <p>
+  The first step with CSS is to figure out how to target the elements you're interested in. In this problem you will have to target various elements and add a CSS declaration to them.
+  </p>
+
+  <p>
+  There are two files you will be using for this problem: <tt>problem1.html</tt> and <tt>problem1.css</tt>. You are <strong>not</strong> allowed to modify problem1.html in any way. All changes will be made <strong>only in problem1.css</strong>. You will of course need to look at the contents of problem1.html, but you may not edit it at all.
+  </p>
+
+  <p>
+  Here is what problem1.html looks like in a browser before modifying the CSS file:
+  </p>
+
+  <figure>
+    <img src="images/p1-before.png">
+  </figure>
+
+  <article>
+  <h3>Part a)</h3>
+  
+  <p>
+    Edit the following rule in <tt>problem1.css</tt> such that all the text on the page is affected, and the background color is changed. You will need to change <tt>???</tt> to be the appropriate selector. We're changing the font-face from the default serif font to a sans-serif font.
+  </p>
+  
+  <pre class="code">??? {
+  font-family: sans-serif;
+  background-color: #84d2e2;
+}</pre>
+
+  <figure>
+    <img src="images/p1-part-a.png">
+  </figure>
+  </article>
+
+  <article>
+    <h3>Part b)</h3>
+  
+    <p>
+      Edit the following rule in <tt>problem1.css</tt> so that the top section has a white background. You will need to change <tt>???</tt> to be the appropriate selector.
+    </p>
+
+  <pre class="code">??? {
+    background-color: white;
+    height: 180px;
+    margin: 0 auto;
+    padding: 25px;
+}</pre>
+
+    <figure>
+      <img src="images/p1-part-b.png">
+    </figure>
+  </article>
+
+
+  <article>
+    <h3>Part c)</h3>
+  
+    <p>
+      Edit the following rule in <tt>problem1.css</tt> so that the header Logo image is floated to the right side of the page. You will need to change <tt>???</tt> to be the appropriate selector.
+    </p>
+
+  <pre class="code">??? {
+    float: right;
+}</pre>
+
+    <figure>
+      <img src="images/p1-part-c.png">
+    </figure>
+  </article>
+
+
+  <article>
+    <h3>Part d)</h3>
+  
+    <p>
+      Edit the following rule in <tt>problem1.css</tt> so that each 'sweet' block is formatted better. You will need to change <tt>???</tt> to be the appropriate selector.
+    </p>
+
+  <pre class="code">??? {
+    box-sizing: border-box;
+    display: block;
+    width: 400px;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid grey;
+    background-color: white;
+}</pre>
+
+    <figure>
+      <img src="images/p1-part-d.png">
+    </figure>
+  </article>
+
+  <article>
+    <h3>Part e)</h3>
+  
+    <p>
+      Edit the following rule in <tt>problem1.css</tt> so that all the anchor elements are bold. You will need to change <tt>???</tt> to be the appropriate selector.
+    </p>
+
+  <pre class="code">??? {
+      font-weight: bold;
+}</pre>
+
+    <figure>
+      <img src="images/p1-part-e.png">
+    </figure>
+  </article>
+
+
+  <article>
+    <h3>Part f)</h3>
+  
+    <p>
+      Edit the following rule in <tt>problem1.css</tt> to remove the default padding around the figures in the 'sweets'. You will need to change <tt>???</tt> to be the appropriate selector.
+    </p>
+
+  <pre class="code">??? {
+    margin: 0;
+    padding: 0;
+}</pre>
+
+    <figure>
+      <img src="images/p1-part-f.png">
+    </figure>
+  </article>
+
+
+  <article>
+    <h3>Part g)</h3>
+  
+    <p>
+      Edit the following rule in <tt>problem1.css</tt> so that the avatar images for each sweet is a bit smaller with rounded edges. You will need to change <tt>???</tt> to be the appropriate selector.
+    </p>
+
+  <pre class="code">??? {
+    width: 60px;
+    border-radius: 5px;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}</pre>
+
+    <figure>
+      <img src="images/p1-part-g.png">
+    </figure>
+  </article>
+
+
+  <article>
+    <h3>Part h)</h3>
+  
+    <p>
+      We don't want the actual text of the sweet to be wrapped next to the avatar image, it should be below it.
+      Edit the following rule in <tt>problem1.css</tt> so the main text of the sweet is clear of all nearby floated elements. You will need to change <tt>???</tt> to be the appropriate selector.
+    </p>
+
+  <pre class="code">??? {
+  clear: both;
+}</pre>
+
+    <figure>
+      <img src="images/p1-part-h.png">
+    </figure>
+  </article>
+
+
+  <article>
+    <h3>Part i)</h3>
+  
+    <p>
+      Edit the following rule in <tt>problem1.css</tt> so that the hashtags on each sweet appear on a single line, and get rid of the bullet point. You will need to change <tt>???</tt> to be the appropriate selector.
+    </p>
+
+  <pre class="code">??? {
+    display: inline;
+    padding: 0 10px;
+}</pre>
+
+    <figure>
+      <img src="images/p1-part-i.png">
+    </figure>
+  </article>
+
+
+  <article>
+    <h3>Part j)</h3>
+  
+    <p>
+      Edit the following rule in <tt>problem1.css</tt> so that all the links inside footer elements are smaller. You will need to change <tt>???</tt> to be the appropriate selector.
+    </p>
+
+  <pre class="code">??? {
+  font-size: 0.6em;
+}</pre>
+
+    <figure>
+      <img src="images/p1-part-j.png">
+    </figure>
+  </article>
+
+
+
+  <article>
+    <h3>Part k)</h3>
+  
+    <p>
+      Edit the following rule in <tt>problem1.css</tt> so that the footer links are aligned to the right side of their container. You will need to change <tt>???</tt> to be the appropriate selector.
+    </p>
+
+  <pre class="code">??? {
+    display: inline;
+    padding: 10px;
+    float: right;
+}</pre>
+
+    <figure>
+      <img src="images/p1-part-k.png">
+    </figure>
+  </article>
+    
+  <article>
+    <h3>Part l)</h3>
+  
+    <p>
+      Some of the links on this page target another window.
+      Edit the following rule in <tt>problem1.css</tt> so that the following footer links at the very bottom of the page are <strong>not</strong> underlined. You will need to change <tt>???</tt> to be the appropriate selector.
+    </p>
+
+  <pre class="code">??? {
+  text-decoration: none;
+}</pre>
+
+    <figure>
+      <img src="images/p1-part-l.png">
+    </figure>
+  </article>
+
+</article>
+
+<article>
+  <h2>Problem 2 - 40 points</h2>
+  
+  <p>
+    Next we will flip it around. For this problem, <tt>problem2.css</tt> has a series of rules already present. You will need to modify <tt>problem2.html</tt> so that it matches the following picture. In this case you may not modify the CSS file at all, only modify the HTML file to match the following image. You will need to add several HTML elements to the document in order to have it match.
+  </p>
+  
+  <p>
+    Note that this design will not scale very well if your browser window gets too wide or too narrow.  So try adjusting your browser window width to match the rough width of the image for best results.
+  </p>
+
+  <figure>
+    <img src="images/p2-final.png">
+  </figure>
+
+</article>
+
+<article>
+  <h2>Problem 3 - 10 points</h2>
+  
+  <p>
+    For this problem, you will back to updating a CSS file, <tt>problem3.css</tt>. You will make <tt>problem3.html</tt> look the same as the image below, by only adding CSS rules to <tt>problem3.css</tt>
+  </p>
+
+  <figure>
+    <img src="images/p3-final.png">
+  </figure>
+
+</article>
+
+<article>
+  <h2>Problem 4 - 10 points</h2>
+  
+  <p>
+    This problem deals with CSS precedent and specificity. The file <tt>problem4.html</tt> has two CSS files linked to it. You are only allowed to modify <tt>problem4.css</tt> and may not change, add, or remove rules to <tt>problem4-x.css</tt>. You may also not edit <tt>problem4.html</tt>.
+  </p>
+    
+    <p>
+    Here's what the page looks like to begin with, with only the rules from problem4-x.css applied:
+    </p>
+    <figure>
+    <img src="images/p4-start.png">
+    </figure>
+    
+    
+  <p>
+    Create as many new CSS rules in <tt>problem4.css</tt> as are required to accomplish the following: 
+  </p>
+    <ul>
+        <li>Set the text color of the elements under the "Costs" section to 'orange'.</li>
+        <li>Set the background color of the top level list items to 'lightgray'.</li>
+        <li>Fix the bottom margins of the children of section 2 so that they're right below the item above it.  Leave the space between items 1 and 2 the same.</li>
+        <li>Fix the text size of sections i and ii to only be '1em'.</li>
+        <li>Remember <strong><em>you may not</em></strong> alter <tt>problem4.css</tt> or <tt>problem4.html</tt> for this problem.</li>
+    </ul>
+  
+  <figure>
+    <img src="images/p4-final.png">
+  </figure>
+
+
+</article>
+
+
+
+
+<article>
+  <h2>Homework Submission</h2>
+
+  <p>
+  You should create a folder holding your files, and zip it up for submission.  Name your folder and zip file something descriptive like Mark-Fischer-HW2.zip or something. Please make a folder with your files in it, and zip up the folder. Do not select all the files and zip them up.
+  </p>
+
+  <h3>File List</h3>
+  <ul>
+    <li><tt>problem1.css</tt>
+    <li><tt>problem2.html</tt>
+    <li><tt>problem3.css</tt>
+    <li><tt>problem4.css</tt>
+  </ul>
+
+  <p>
+  Homeworks Zip files will be submitted to D2L, in the "Assignment 2" dropbox.
+  </p>
+</article>
+
+<div class="clearfix"></div>
+
+</div> <!-- end #content -->
+
+</body>
+
+
+</html>
