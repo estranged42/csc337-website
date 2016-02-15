@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>CS 337 Web Programming - Homework Assignment 3</title>
+  <link rel="stylesheet" type="text/css" href="../document.css" />
+</head>
+
+<body>
+
+<div id="content">
+
+<h1>CS 337 - Web Programming - Homework Assignment 3</h1>
+
+<article>
+  <p>
+  This assignment is worth a total of 100 points.
+  </p>
+
+  <p>
+  This assignment will focus on laying out sections of a web page in various blocks, and making sure they are positioned correctly.
+  </p>
+
+  <h3>Instructions for all problems</h3>
+
+  <ol>
+    <li>There will be additional instructions numbered like this for the individual problems.  Be sure to follow all the instructions!
+  </ol>
+
+  <h3>Resource Files</h3>
+
+  <p>
+  The files you will need to complete this assignment are <a href="files">located in this files folder</a>.
+  </p>
+</article>
+
+<article>
+  <h2>Problem 1: Box Model - 50 points</h2>
+  
+  <p>
+    You have been given a basic design mockup as an image. The image is below. (Click on it for a larger version). You must create the HTML and CSS to create the design as a web page. There are a series of measurements to assist you:
+  </p>
+  
+  <ul>
+    <li>The width of the main content container is 8000px.
+    <li>The red gradient header section is 8000px wide.
+    <li>The header uses <tt>header.png</tt> for a background.
+    <li>The text for the header should be white, and a sans-serif font.
+    <li>The text for the header should be closer to the bottom.
+    <li>The red header area should touch the very top of the page.
+  </ul>
+  
+  <ul>
+    <li>The right sidebar is 200px wide.
+    <li>The buttons in the sidebar are 200px wide.
+    <li>The buttons in the sidebar should use <tt>button-background.gif</tt> for their backgrounds.
+    <li>The buttons in the sidebar should have a 5px padding.
+    <li>The spacing between the header and the sidebar buttons is 20px.
+    <li>The spacing between the sidebar buttons is 10px.
+    <li>There is a slight drop shadow on the text in the buttons.  Use <tt>1px 1px 2px black</tt> for the value of this property.
+  </ul>
+
+  <ul>
+    <li>The main content area is 600px wide.
+    <li>The space between the header and the content is 20px.
+    <li>The <tt>thumbnail.png</tt> image is 150px wide and 150px tall.
+    <li>The space between the thumbnail image and the text to the right and below is 20px.
+  </ul>
+
+  <ul>
+    <li>The footer area is 800px wide.
+    <li>The padding inset for the footer area is 20px.
+    <li>The background color for the footer shall be #84d2e2.
+  </ul>
+  
+  <p>
+    Some additional rules for your HTML and CSS:
+  </p>
+  
+  <ul>
+    <li>You may not use any <tt>&lt;table&gt;</tt> elements.
+    <li>You do not have to use the exact text blocks from the mockup. Use a similar amount of filler text for the sidebar and main content area. The main content should still have three paragraphs.
+    <li>You're not given any guidance or requirements on various font sizes. This is typical. Use your best judgment for measuring differences in font sizes from the mockup.
+  </ul>
+  
+  <figure>
+    <a href="files/problem1_assets/mockup.png">
+    <img src="files/problem1_assets/mockup.png" alt="Mockup Image">
+    </a>
+    <figcaption>Mockup Image - Click for larger view</figcaption>
+  </figure>
+  
+</article>
+
+
+<article>
+  <h2>Problem 2: Colors - 20 points</h2>
+  
+  <p>
+    Modify the CSS within the <tt>&lt;style&gt;</tt> element <tt>problem2.html</tt> so that your end result matches the image below. There are additional specific instructions for modifications to each block within <tt>problem2.html</tt>.
+  </p>
+
+  <figure>
+    <a href="files/problem2_assets/start.png">
+    <img src="files/problem2_assets/start.png" alt="Starting Image">
+    </a>
+    <figcaption>Starting Image - Click for larger view</figcaption>
+  </figure>
+
+  <figure>
+    <a href="files/problem2_assets/end.png">
+    <img src="files/problem2_assets/end.png" alt="Ending Image">
+    </a>
+    <figcaption>Ending Image - Click for larger view</figcaption>
+  </figure>
+
+</article>
+
+
+<article>
+  <h2>Problem 3: Positioning - 30 points</h2>
+  
+  <p>
+    Precisely positioning elements for a layout is very important. In this problem you will need to create a CSS file <tt>problem3.css</tt> which will contain rules to change <tt>problem3.html</tt> to look and perform like the following images and video. You may not modify the contents of <tt>problem3.html</tt>, only add CSS rules to <tt>problem3.css</tt>.
+  </p>
+  
+  <ul>
+    <li>Each of the three main boxes is the same size, 150px tall and 150px wide.
+    <li>Each of the three main boxes has 4 positioned blocks within it, one each in the four corners.
+    <li>The smaller boxes in the corners of the main boxes should be blue, and be 25px wide and 25px tall.
+    <li>The main boxes have a green border, which is dotted and 5px thick.
+    <li>#block1 should be positioned in the upper-right corner of the page on page load, and should scroll with the page. It should touch the top, and be 50 pixels from the right edge of the window.
+    <li>#block1 should have a background image of <tt>one.gif</tt> as shown.
+    <li>#block2 should be positioned 200 pixels from the top of the page, along the left edge. It should not scroll with the page.
+    <li>#block2 should have a background image of <tt>two.gif</tt> as shown.
+    <li>#block3 should be positioned at the bottom of the window on page load, and should scroll with the page.
+    <li>#block3 should be positioned 45% of the way from the left side of the window.
+    <li>#block3 should have a background image of <tt>three.gif</tt> as shown.
+  </ul>
+
+  <figure>
+    <a href="files/problem3_assets/problem3.png">
+    <img src="files/problem3_assets/problem3.png" alt="Final Layout for Problem 3">
+    </a>
+    <figcaption>Final Image - Click for larger view</figcaption>
+  </figure>
+
+  <figure>
+    <iframe width="630" height="472" src="https://www.youtube.com/embed/E2z01Iq9Cak?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+    <figcaption>Video of final web page behavior.</figcaption>
+  </figure>
+
+</article>
+
+
+
+
+<article>
+  <h2>Homework Submission</h2>
+
+  <p>
+  You should create a folder holding your files, and zip it up for submission.  Name your folder and zip file something descriptive like <tt>Your-Name-HW3.zip</tt> or something. Please make a folder with your files in it, and zip up the folder. Do not select all the files and zip them up.
+  </p>
+
+  <h3>File List</h3>
+  <ul>
+    <li><tt>problem1_assets/</tt>
+    <li><tt>problem1.css</tt>
+    <li><tt>problem1.html</tt>
+    <li><tt>problem2_assets/</tt>
+    <li><tt>problem2.html</tt>
+    <li><tt>problem3.css</tt>
+  </ul>
+
+  <p>
+  Homeworks Zip files will be submitted to D2L, in the "Assignment 3" dropbox.
+  </p>
+</article>
+
+<div class="clearfix"></div>
+
+</div> <!-- end #content -->
+
+</body>
+
+
+</html>
