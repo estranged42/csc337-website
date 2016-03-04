@@ -20,7 +20,7 @@ var addCount = function(event) {
 
 window.addEventListener('load', function() {
   var numBoxes = 1;
-  main = document.getElementById('main');
+  var main = document.getElementById('main');
   for (i = 0; i < numBoxes; i++) {
     var newBox = document.createElement("div");
     main.appendChild(newBox);
