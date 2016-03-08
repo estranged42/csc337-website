@@ -1,0 +1,152 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>CS 337 Midterm Notes</title>
+	<link rel="stylesheet" type="text/css" href="document.css">
+	<script src=""></script>
+	<style>
+	  section {
+	    box-sizing: border-box;
+	    width: 50%;
+	    float: left;
+	  }
+	  heading {
+	    text-align: center;
+	  }
+	</style>
+
+  <script>
+    /*By JavaScript Kit
+    http://javascriptkit.com
+    Credit MUST stay intact for use
+    */
+
+    function show2(){
+      var thelement = document.getElementById("tick2")
+      var Digital=new Date()
+      var hours=Digital.getHours()
+      var minutes=Digital.getMinutes()
+      var seconds=Digital.getSeconds()
+      var dn="PM"
+      if (hours<12)
+      dn="AM"
+      if (hours>12)
+      hours=hours-12
+      if (hours==0)
+      hours=12
+      if (minutes<=9)
+      minutes="0"+minutes
+      if (seconds<=9)
+      seconds="0"+seconds
+      var ctime=hours+":"+minutes+":"+seconds+" "+dn
+      thelement.innerHTML="<b style='font-size:14;color:blue;'>"+ctime+"</b>"
+      setTimeout("show2()",1000)
+    }
+
+    window.addEventListener('load', show2);
+  </script>
+
+</head>
+
+<body>
+
+<div id="content">
+
+<heading>
+  <h1> Put Your Name on the Exam! </h1>
+  <h2><span id=tick2></span></h2>
+</heading>
+
+<section>
+  <pre>
+  window.content
+  window.devicePixelRatio
+  window.document
+  window.frames
+  window.innerHeight
+  window.innerWidth
+  window.location
+  window.name
+  window.outerHeight
+  window.outerWidth
+  window.pageXOffset
+  window.pageYOffset
+  window.scrollX
+  window.scrollY
+  window.status
+
+  window.addEventListener('eventName', callback);
+  window.alert('msg text');
+  window.close();
+  window.confirm('msg text');
+  window.focus();
+  window.getSelection();
+  window.scroll(xloc, yloc);
+  window.scrollBy(deltaX, deltaY);
+  
+  
+  element.attributes
+  element.childNodes
+  element.children
+  element.innerHTML
+  element.offsetLeft
+  element.offsetTop
+  element.offsetRight
+  element.offsetBottom
+  element.parentNode
+  element.style.propertyname = "newCSSvalue";
+  element.textContent
+  
+  </pre>
+</section>
+
+<section>
+  <pre>
+  
+  element.appendChild(newElementObject);
+  element.click();
+  element.classList.add("newClassName");
+  element.removeChild(elementToRemove);
+  
+  console.error(msg);
+  console.info(msg);
+  console.log(msg);
+  console.trace();
+  console.warn(msg);
+
+
+  document.body
+  document.doctype
+  document.documentURI
+  document.forms
+  document.images
+  document.links
+  document.readyState
+  document.scripts
+  document.styleSheets
+  document.title
+  document.URL
+
+  document.createComment('comment text');
+  document.createElement('elementType');
+  document.createEvent('eventType');
+  document.createTextNode('text');
+  document.getElementsByClassName('className');
+  document.getElementsByTagName('tagName');
+  document.getElementById('idName');
+
+
+  MouseEvent.clientX
+  MouseEvent.clientY
+  MouseEvent.screenX
+  MouseEvent.screenY
+
+
+  </pre>
+</section>
+
+</div>
+
+</body>
+</html>
