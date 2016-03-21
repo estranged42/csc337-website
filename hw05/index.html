@@ -1,0 +1,298 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>CS 337 Web Programming - Homework Assignment 5</title>
+  <link rel="stylesheet" type="text/css" href="../document.css" />
+</head>
+
+<body>
+
+<div id="content">
+
+<h1>CS 337 - Web Programming - Homework Assignment 5</h1>
+
+<article>
+  <p>
+  This assignment is worth a total of 100 points.
+  </p>
+
+  <p>
+  This assignment will focus on some of the basics of the PHP programming language.
+  </p>
+  
+
+  <h3>Resource Files</h3>
+
+  <p>
+  The files you will need to complete this assignment are <a href="files">located in this files folder</a>.
+  </p>
+</article>
+
+<article>
+  <h2>Problem 0: Environment Setup 10 points</h2>
+
+  <p>
+    This assignment will require that you have access to a PHP environment of some type. While you can use whatever PHP environment you wish for development and testing, you will be graded on the performance of your code on the AWS Virtual Machines set up for you for the class.
+  </p>
+  
+  <p>
+    Specifics of the AWS Virtual Machines:
+  </p>
+  
+  <ul>
+    <li>See lecture slides for setup and overview <a href="../pdfs/07%20Web%20Server%20(full%20slides).pdf">[web server full slides]</a>
+    <li>Turn your server off and on at: <a href="https://toolshed.uits.arizona.edu/aws/csc337">https://toolshed.uits.arizona.edu/aws/csc337</a>
+    <li>PHP 5.6.17
+    <li>MySQL 5.5.46 MySQL Community Server
+    <li>PHP PDO Library with MySQL
+  </ul>
+  
+  <p>
+    Create a new html file <tt>setup.php</tt> and place it inside your <tt>html</tt> folder on your class VM. It should be accessible by going to <tt>http://xx.xx.xx.xx/setup.php</tt> where the IP address is the current one assigned to your VM.  The contents of the file should just contain your name, and the following PHP code:
+      <figure>
+        <code>
+          echo time();
+        </code>
+      </figure>
+  </p>
+  
+
+  <figure>
+    <a href="images/problem0.png">
+    <img src="images/problem0.png" alt="Screenshot of Problem 0 solution">
+    </a>
+    <figcaption>Your page should look similar to the above image, and be accessible when we turn on your VM for grading.</figcaption>
+  </figure>
+
+</article>
+
+<article>
+  <h2>Problem 1: 50 points</h2>
+  
+  <p>
+    There are two PHP files given to you for this problem: <tt>problem1.php</tt> and <tt>problem1_library.php</tt>. Your task will be to modify <tt>problem1_library.php</tt> and add various functions to it that will be called from <tt>problem1.php</tt>.  You may want to modify <tt>problem1.php</tt> as you work, to comment out various function calls before you're ready for them, but we will use a new copy of the file when grading your work.
+  </p>
+  
+  <p>
+    As a starting point, you are given one function, <tt>stringCat()</tt> as an example. You can see how this function is called from within <tt>problem1.php</tt>. You will create a total of eight more functions, and one new PHP class in the <tt>problem1_library.php</tt> file.
+  </p>
+
+  <p>
+    The various function calls inside of <tt>problem1.php</tt> are commented out initially. As you begin to work on each part, un-comment the appropriate function calls within <tt>problem1.php</tt> 
+  </p>
+  
+  <h3>Part a) Error Reporting</h3>
+  
+  <p>
+    You may not know what the current error reporting levels are set at for your environment. For this part create a new function <tt>setErrorLevel()</tt> that takes no arguments. Make sure that the error reporting levels include only the following items:
+  </p>
+  <ul>
+    <li>E_ERROR
+    <li>E_WARNING
+    <li>E_NOTICE
+    <li>E_PARSE
+  </ul>
+  <p>
+    Your function will be called first to set the levels, then the current error reporting levels will be printed to the screen.
+  </p>
+
+  <h3>Part b) String Cleanup</h3>
+  
+  <p>
+    Create a new function named <tt>myStringCleanup</tt> which takes a single string argument. Do the following to the incoming string, and return the result:
+  </p>
+  <ul>
+    <li>Strip all white space from the beginning and end of the string.
+    <li>Remove any spaces in the string.
+    <li>Make sure the whole string is lower case.
+  </ul>
+
+  <h3>Part c) Odd or Even</h3>
+  
+  <p>
+    Create a new function named <tt>oddEven</tt> which takes a single numerical argument. Determine if the number is odd or even, and return either the string "odd" or the string "even" for each case.
+  </p>
+
+  <h3>Part d) Build an Array</h3>
+  
+  <p>
+    Create a new function named <tt>buildArray</tt> which takes four arguments. Take these four arguments and create an array with them. Return your newly created array.
+  </p>
+ 
+  <h3>Part e) Read a Local File</h3>
+  <p>
+    In the files folder there is a text file: <tt>external_file.txt</tt>. Create a function called <tt>readLocalFile</tt> that takes no arguments. This function should do the following:
+  </p>
+  <ul>
+    <li>Read in the contents of <tt>external_file.txt</tt> to a local variable.
+    <li>Replace any line feeds with <tt>&lt;br&gt;</tt> elements, so line breaks are preserved.
+    <li>Replace all spaces with a non-breaking space character entity, so line spacing is preserved.
+    <li>Return the modified contents as a string.
+  </ul>
+
+  <h3>Part f) Server Software</h3>
+  <p>
+    Create a new function <tt>serverSoftware</tt> which takes no arguments. In this function, determine what sort of server software the current PHP environment is running in. Return this as a string.  Note that your server software string may differ from the one in the screenshot below. As long as its close that's fine.  The one in my screenshot is taken from the AWS Virtual Machines set up for the class.
+  </p>
+
+  <h3>Part g) Objects</h3>
+  <p>This part is a little more involved. You will first need to flesh out a PHP Class named <tt>mySimpleClass</tt>. The skeleton of the class is given to you. You will need to do the following within the class:
+  </p>
+  <ul>
+    <li>Create a class property named $secret to store the given secret in.
+    <li>Finish the __construct method so that the secret passed in through the constructor is stored in the local property.
+    <li>Create a <tt>getSecret</tt> method so that it returns a Base 64 encoded version of the stored secret property.
+  </ul>
+  
+  <p>
+    Create a new function <tt>makeObject</tt> which takes one argument, a secret string. In this function, do the following:
+  </p>
+  <ul>
+    <li>Create a new <tt>mySimpleClass</tt> object, and pass along the secret argument as an argument to the constructor.
+    <li>Return the newly created object.
+  </ul>
+
+  <h3>Part h) Data Types</h3>
+  <p>
+    Create a new function <tt>getDatatype</tt> which takes one argument. In this function, determine the PHP Data Type, and return it as a string.
+  </p>
+
+  <h3>Final Page</h3>
+  <p>
+    Once you have all the parts finished, your page should look something like the following screenshot. There may be minor differences in parts f and g, but the others should look the same.
+  </p>
+
+  <figure>
+    <a href="images/problem1.png">
+    <img src="images/problem1.png" alt="Screenshot of Problem 1 solution">
+    </a>
+    <figcaption>Final Image - Click for larger view</figcaption>
+  </figure>
+
+</article>
+
+
+
+<article>
+  <h2>Problem 2: Basic PHP Page - 10 points</h2>
+  
+  <p>
+    For this problem you will create a simple PHP Web Page, and add a small bit of server side logic to it.
+  </p>
+
+  <p>
+    In the files folder is a file named <tt>problem2.php</tt>. It doesn't have much in it to start.  There are two HTML comments in the file which direct you where to place a bit of server side logic.
+  </p>
+  
+  <h3>Part a) File Include</h3>
+  <p>
+    Include a header file in the <tt>problem2.php</tt> file. There is an external file named <tt>header.html</tt> which contains an HTML fragment. Include this file in the main <tt>problem2.php</tt> file using PHP.
+  </p>
+  
+  <h3>Part a) Current Date</h3>
+  <p>
+    Echo the current day and date to the page when the page is viewed. The format for the date is given in the following screenshot. You will have to research the correct syntax for the <tt>date()</tt> function from the <a href="http://php.net/docs.php">PHP Documentation</a>
+  </p>
+
+  <figure>
+    <a href="images/problem2.png">
+    <img src="images/problem2.png" alt="Screenshot of Problem 2 solution">
+    </a>
+    <figcaption>Final Image - Click for larger view</figcaption>
+  </figure>
+
+</article>
+
+
+<article>
+  <h2>Problem 3: Forms - 30 points</h2>
+
+  <p>
+    For this problem, you will create a Contact page, and add an HTML form to it. You will also create a new PHP script to echo the form contents.
+  </p>
+    
+  <ul>
+    <li>Create contact.html and add an HTML form with the following fields:
+      <ul>
+        <li>Name  (text input)
+        <li>Email (text input)
+        <li>Comment (textarea)
+        <li>Popup Select with two options:
+          <ul>
+            <li>Add me to your mailing list
+            <li>Do not add me to your mailing list
+          </ul>
+        <li>A button to submit the form (submit input)
+      </ul> 
+    </li>
+    <li><tt>contact.html</tt> must be styled to look better than a plain default HTML page on a white background. It doesn't have to look exactly like mine, but it can't look plain and boring.  Feel free to add images if you like, but be sure to include them with your submission.
+    <li>The <tt>action</tt> attribute for the form should point to a new file named <tt>form.php</tt>.
+    <li>The <tt>method</tt> attribute for the form should be <tt>POST</tt>.
+    <li>The new <tt>form.php</tt> program should simply echo the value of each form field as an item in an unordered list.
+    <li><tt>form.php</tt> should output a complete and valid HTML document.
+  </ul>
+  
+  <figure>
+    <a href="images/problem3.png">
+    <img src="images/problem3.png" alt="Sample Form Image">
+    </a>
+    <figcaption>Example Form - Click for larger view</figcaption>
+  </figure>
+
+  <figure>
+    <a href="images/problem3b.png">
+    <img src="images/problem3b.png" alt="Form submission result">
+    </a>
+    <figcaption>Example form.php result page - Click for larger view</figcaption>
+  </figure>
+
+</article>
+
+
+
+
+<article>
+  <h2>Homework Submission</h2>
+
+  <p>
+  You should create a folder holding your files, and zip it up for submission.  Name your folder and zip file something descriptive like <tt>Your-Name-HW5.zip</tt>. Please make a folder with your files in it, and zip up the folder. Do not select all the files and zip them up.  Your name is not Mark Fischer (that's my name!).  :)
+  </p>
+  
+  <h3>File List</h3>
+  <ul>
+    <li><tt>problem1_library.php</tt>
+    <li><tt>problem2.php</tt>
+    <li><tt>form/</tt>
+    <ul>
+      <li><tt>contact.html</tt>
+      <li><tt>form.php</tt>
+      <li><tt>style.css?</tt>
+      <li><tt>images?</tt>
+    </ul>
+  </ul>
+
+  <p>
+  Homeworks Zip files will be submitted to D2L, in the "Assignment 5" dropbox.
+  </p>
+  
+  <p>
+  You must also have the following pages available on your class VM
+  </p>
+
+  <h3>Server Web Pages</h3>
+  <ul>
+    <li><tt>http://xx.xx.xx.xx/setup.php</tt>
+  </ul>
+
+
+</article>
+
+<div class="clearfix"></div>
+
+</div> <!-- end #content -->
+
+</body>
+
+
+</html>
