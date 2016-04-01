@@ -30,7 +30,7 @@ function getBooks(event) {
   };
   
   // Set up our HTTP Request
-  var jsonFile = "ajax.php";
+  var jsonFile = "books.json";
   req.open('GET', jsonFile, true);   // the 3rd parameter denotes if we want the request to
                                          // be asynchronous or not. Here we do, so its true
   
