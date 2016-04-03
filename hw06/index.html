@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>CS 337 Web Programming - Homework Assignment 6</title>
+  <link rel="stylesheet" type="text/css" href="../document.css" />
+</head>
+
+<body>
+
+<div id="content">
+
+<h1>CS 337 - Web Programming - Homework Assignment 6</h1>
+
+<article>
+  <p>
+  This assignment is worth a total of 100 points.
+  </p>
+
+  <p>
+  This assignment will focus on the client side of an AJAX web application.
+  </p>
+  
+
+  <h3>Resource Files</h3>
+
+  <p>
+  The files you will need to complete this assignment are <a href="files">located in this files folder</a>.
+  </p>
+
+  <h3>API Documentation</h3>
+
+  <p>
+  The API documentation for the Monty Hall web service is here: <a href="api.html">API Documentation</a>. Reading and understanding this API will be critical to success in this assignment.
+  </p>
+</article>
+
+<article>
+  <h2>Problem 1: Monty Hall Front-End (100 points)</h2>
+  
+  <p>
+    The remaining two assignments for the semester have you implement a client-server AJAX based web application to play the Monty Hall game. If you're not familiar with this problem, or want a deeper dive into it, see the WikiPedia article for it: <a href="https://en.wikipedia.org/wiki/Monty_Hall_problem">https://en.wikipedia.org/wiki/Monty_Hall_problem</a>.
+  </p>
+
+  <p>
+    The basics of the game work like this:
+    <ol>
+      <li>The Player is presented with 3 closed doors.  There is a prize behind one of the doors.
+      <li>The Player first selects one door, but does not open it.
+      <li>The Host then opens one of the doors the Player did not choose. The Host will <strong>always</strong> open a door with no prize behind it.
+      <li>The Player is then given a final choice: stick with the original door the player selected, or switch their choice to the other door that the Host did not open.
+      <li>Finally the Host reveals the door containing the prize, and the Player either wins or looses.
+    </ol>
+  </p>
+  
+  <p>
+    For this assignment you will create a web page front-end for the Monty Hall problem.  The front-end communicates via the AJAX technique with a back-end API.  For this first part, I have implemented a reference API back-end you can all use to test your front-ends against.
+  </p>
+  
+  <p>
+    For assignment 7, you will implement the PHP/MySQL based back-end API.
+  </p>
+  
+  <h3>Minimum Requirements</h3>
+  
+  <p>
+    You will have 3 main components to your web page:
+    <ul>
+      <li>3 Doors to click on
+      <li>A message box to display messages to the Player
+      <li>A table of win/loss stats
+    </ul>
+  </p>
+
+  <p>
+    Door behavior:
+  </p>
+  
+  <ul>
+    <li>When you click on a door to select it, you will need to indicate that it is selected in some way.
+    <li>When the incorrect door is 'opened', indicate that the door is incorrect somehow.
+    <li>When the final prize door is 'opened' indicate that that door held the prize somehow.
+  </ul>
+  
+  <figure>
+    <a href="images/newgame.png">
+    <img src="images/newgame.png" alt="New Game State">
+    </a>
+    <figcaption>Initial Page load, showing a new game - Click for larger view</figcaption>
+  </figure>
+
+  <figure>
+    <a href="images/opendoor.png">
+    <img src="images/opendoor.png" alt="Door Opened">
+    </a>
+    <figcaption>After clicking on a door, and an incorrect door being opened - Click for larger view</figcaption>
+  </figure>
+
+  <figure>
+    <a href="images/won.png">
+    <img src="images/won.png" alt="Sample Form Image">
+    </a>
+    <figcaption>End of the game - Click for larger view</figcaption>
+  </figure>
+
+  <p>
+    Message Box behavior. There are three required messages that should be displayed. The door number printed to the Player should <strong>not</strong> be zero indexed.  So the first door should be door 1, and the last door should be door 3. Only convert door indexes when displaying door numbers to the Player.
+  </p>
+  
+  <ul>
+    <li>New Game! Choose a door.
+    <li>Door 2 doesn't have the prize. Choose your first door again, or switch?
+    <li>Win/Loose:
+        <ul>
+          <li>You Won! Door 1 had the prize!
+          <li>You Lost. Door 1 had the prize.
+        </ul>
+    </li>
+  </ul>
+
+  <p>
+    Stats Table
+  </p>
+  
+  <ul>
+    <li>Table should show stats at the beginning of the game
+    <li>Stats should be updated when the game is over
+  </ul>
+
+  <h3>Extra Credit (5 points)</h3>
+  
+  <p>
+    Five points of extra credit are available if you choose to make the game look better.  Ideas include, but are not limited to:
+  </p>
+
+  <ul>
+    <li>Make doors look more like doors
+    <li>Animate door openings
+    <li>Have something behind the prize door
+    <li>Have something behind the incorrect doors
+    <li>Make the front-end page mobile-responsive (indicate this in your submission so we test it)
+    <li>... other ideas?
+  </ul>
+  
+</article>
+
+
+<article>
+  <h2>Homework Submission</h2>
+
+  <p>
+  You should create a folder holding your files, and zip it up for submission.  Name your folder and zip file something descriptive like <tt>Your-Name-HW6.zip</tt>. Please make a folder with your files in it, and zip up the folder. Do not select all the files and zip them up.  Your name is not Mark Fischer (that's my name!).  :)
+  </p>
+  
+  <h3>File List</h3>
+  <ul>
+    <li><tt>problem1.html</tt>
+    <li><tt>problem1.js</tt>
+    <li><tt>problem1.css</tt>
+  </ul>
+
+  <p>
+  Homeworks Zip files will be submitted to D2L, in the "Assignment 6" dropbox.
+  </p>
+  
+
+</article>
+
+<div class="clearfix"></div>
+
+</div> <!-- end #content -->
+
+</body>
+
+
+</html>

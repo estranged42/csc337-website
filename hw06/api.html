@@ -1,0 +1,456 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>CS 337 Web Programming - Homework Assignment 6 - Monty Hall API</title>
+  <link rel="stylesheet" type="text/css" href="../document.css" />
+</head>
+
+<body>
+
+<div id="content">
+
+<h1>Homework Assignment 6 - Monty Hall API</h1>
+
+<article>
+  <p>
+  All API calls are simple HTTP GET requests, with various key/value pairs passed in as part of the query string.
+  </p>
+  
+  <h4>API Endpoint</h4>
+  
+  <p>
+  The reference implementation of the API can be accessed at <a href="http://52.35.157.11/hw6/server.php" target="_new">http://52.35.157.11/hw6/server.php</a> from anywhere.
+  </p>
+
+  <p>
+  All API responses are JSON encoded messages, sent with a Content-Type of text/json.
+  </p>
+  
+  <p>
+  An example API request and response:
+  
+    <figure>
+    <code>
+      server.php?cmd=stats
+    </code>
+    <figcaption>HTTP Request for game stats</figcaption>
+    </figure>
+
+    <figure>
+    <pre>
+{
+	"message": "stats",
+	"data": {
+		"switchWins": "15",
+		"switchLoss": "9",
+		"noSwitchWins": "4",
+		"noSwitchLoss": "10"
+	}
+}</pre>
+    <figcaption>API Response for game stats</figcaption>
+    </figure>
+
+  </p>
+  
+  <p>
+    Here the full request URL for the reference API server would be <strong>http://52.35.157.11/hw6/server.php?cmd=stats</strong> and the response is shown. The reference API server displays "pretty printed" JSON, but this is not required if you are implementing the API, as it is not a built-in feature of all PHP versions.
+  </p>
+  
+  <h4>Successful Commands</h4>
+  <p>
+    Successful commands will be returned with an HTTP code of 200. The JSON response will be an object. Successful responses will have a "message" property which will contain a descriptive message about what's going on.  It may return other properties as well depending on the API Command.
+  </p>
+
+  <h4>Errors</h4>
+  <p>
+    Certain commands may return errors depending on the situation. This most often occurs when an incomplete or invalid command is given.  Errors are reported back with HTTP codes of 400-499 depending on the error.  The JSON response will contain an "error" property, which is a descriptive string describing the error.
+  </p>
+
+    <figure>
+    <pre>
+{
+  "error": "invalid command"
+}</pre>
+    <figcaption>API Response for an invalid command</figcaption>
+    </figure>
+    
+  <h2>API Commands</h2>
+  
+  
+  <!-- 
+    getGame command 
+    -->
+  <section id="newGame" class="command">
+    <h4>newGame</h4>
+    
+    <p>
+      The newGame command will create a new game in the database, and return basic game data. The most important thing returned is the game_id, required for all subsequent API calls.
+    </p>
+    
+    <div class="request">
+      <h4>REQUEST</h4>
+      <ul>
+        <li>cmd=newGame
+      </ul>
+    </div>
+    
+    <div class="response">    
+      <h4>RESPONSE</h4>
+      <ul>
+        <li>message: "new game created"
+        <li>data: game data
+      </ul>
+    </div>
+    
+    <div class="example">
+    <figure>
+    <pre>
+server.php?cmd=newGame
+    </pre>
+    </figure>
+
+    <figure>
+    <pre>
+{
+	"message": "new game created",
+	"data": {
+		"game_id": "5",
+		"opened_door": null,
+		"initial_selected": null,
+		"final_selected": null
+	}
+}</pre>
+    </figure>
+    </div>
+  </section>
+
+
+  <!-- 
+    firstChoice command 
+    -->
+  <section id="firstChoice" class="command">
+    <h4>firstChoice</h4>
+    
+    <p>
+      The firstChoice command will enter the Player's first choice of door. The Server will respond with updated game data, with opened_door being ID of the door the Host will open to show no prize.
+    </p>
+    
+    <div class="request">
+      <h4>REQUEST</h4>
+      <ul>
+        <li>cmd=firstChoice
+        <li>game_id=[id of game]
+        <li>choice=[door number chose (zero based indexes)]
+      </ul>
+    </div>
+    
+    <div class="response">    
+      <h4>RESPONSE</h4>
+      <ul>
+        <li>message: "opened door"
+        <li>data: game data
+      </ul>
+    </div>
+    
+    <div class="example">
+    <figure>
+    <pre>
+server.php?cmd=firstChoice&game_id=5&choice=0
+    </pre>
+    </figure>
+
+    <figure>
+    <pre>
+{
+	"message": "opened door",
+	"data": {
+		"game_id": "5",
+		"opened_door": "1",
+		"initial_selected": "0",
+		"final_selected": null
+	}
+}</pre>
+    </figure>
+    </div>
+
+    <div class="example">
+    <figure>
+    <pre>
+server.php?cmd=firstChoice
+    </pre>
+    </figure>
+
+    <figure>
+    <pre>
+{
+	"error": "game_id parameter is required"
+}</pre>
+    </figure>
+    </div>
+
+    <div class="example">
+    <figure>
+    <pre>
+server.php?cmd=firstChoice&game_id=5
+    </pre>
+    </figure>
+
+    <figure>
+    <pre>
+{
+	"error": "choice parameter is required"
+}</pre>
+    </figure>
+    </div>
+
+    <div class="example">
+    <figure>
+    <pre>
+server.php?cmd=firstChoice&game_id=ABC&choice=0
+    </pre>
+    </figure>
+
+    <figure>
+    <pre>
+{
+	"error": "game_id must be an integer"
+}</pre>
+    </figure>
+    </div>
+
+    <div class="example">
+    <figure>
+    <pre>
+server.php?cmd=firstChoice&game_id=5&choice=ABC
+    </pre>
+    </figure>
+
+    <figure>
+    <pre>
+{
+	"error": "choice must be an integer"
+}</pre>
+    </figure>
+    </div>
+
+    <div class="example">
+    <figure>
+    <pre>
+server.php?cmd=firstChoice&game_id=8271761&choice=0
+    </pre>
+    </figure>
+
+    <figure>
+    <pre>
+{
+	"error": "no matching game found"
+}</pre>
+    </figure>
+    </div>
+
+    
+  </section>
+
+
+  <!-- 
+    finalChoice command 
+    -->
+  <section id="finalChoice" class="command">
+    <h4>finalChoice</h4>
+    
+    <p>
+      The finalChoice command will enter the final choice of the Player for their chosen door. The Server will respond with wether or not the Player has won, as well as the final game state, including the correct door the prize was behind.
+    </p>
+    
+    <div class="request">
+      <h4>REQUEST</h4>
+      <ul>
+        <li>cmd=finalChoice
+        <li>game_id=[id of game]
+        <li>choice=[door number chose (zero based indexes)]
+      </ul>
+    </div>
+    
+    <div class="response">    
+      <h4>RESPONSE</h4>
+      <ul>
+        <li>message: "you won" or "you lost"
+        <li>gameID: final game data
+      </ul>
+    </div>
+    
+    <div class="example">
+    <figure>
+    <pre>
+server.php?cmd=finalChoice&game_id=5&choice=2
+    </pre>
+    </figure>
+
+    <figure>
+    <pre>
+{
+	"message": "you won",
+	"data": {
+		"game_id": "5",
+		"prize_door": "0",
+		"opened_door": "1",
+		"initial_selected": "0",
+		"final_selected": "2"
+	}
+}</pre>
+    </figure>
+    </div>
+
+    <div class="example">
+    <figure>
+    <pre>
+server.php?cmd=finalChoice&game_id=5&choice=1
+    </pre>
+    </figure>
+
+    <figure>
+    <pre>
+{
+	"error": "cannot choose opened door"
+}</pre>
+    </figure>
+    </div>
+
+    <div class="example">
+    <figure>
+    <pre>
+server.php?cmd=finalChoice
+    </pre>
+    </figure>
+
+    <figure>
+    <pre>
+{
+	"error": "game_id parameter is required"
+}</pre>
+    </figure>
+    </div>
+
+    <div class="example">
+    <figure>
+    <pre>
+server.php?cmd=finalChoice&game_id=5
+    </pre>
+    </figure>
+
+    <figure>
+    <pre>
+{
+	"error": "choice parameter is required"
+}</pre>
+    </figure>
+    </div>
+
+    <div class="example">
+    <figure>
+    <pre>
+server.php?cmd=finalChoice&game_id=ABC&choice=0
+    </pre>
+    </figure>
+
+    <figure>
+    <pre>
+{
+	"error": "game_id must be an integer"
+}</pre>
+    </figure>
+    </div>
+
+    <div class="example">
+    <figure>
+    <pre>
+server.php?cmd=finalChoice&game_id=5&choice=ABC
+    </pre>
+    </figure>
+
+    <figure>
+    <pre>
+{
+	"error": "choice must be an integer"
+}</pre>
+    </figure>
+    </div>
+
+    <div class="example">
+    <figure>
+    <pre>
+server.php?cmd=finalChoice&game_id=8271761&choice=0
+    </pre>
+    </figure>
+
+    <figure>
+    <pre>
+{
+	"error": "no matching game found"
+}</pre>
+    </figure>
+    </div>
+
+  </section>
+
+
+  <!-- 
+    stats command 
+    -->
+  <section id="stats" class="command">
+    <h4>stats</h4>
+    
+    <p>
+      The stats command will return data about how may games have been won and lost, depending on wether the Player switched their choice or not.
+    </p>
+    
+    <div class="request">
+      <h4>REQUEST</h4>
+      <ul>
+        <li>cmd=stats
+      </ul>
+    </div>
+    
+    <div class="response">    
+      <h4>RESPONSE</h4>
+      <ul>
+        <li>message: "stats"
+        <li>data: game stats
+      </ul>
+    </div>
+    
+    <div class="example">
+    <figure>
+    <pre>
+server.php?cmd=stats
+    </pre>
+    </figure>
+
+    <figure>
+    <pre>
+{
+	"message": "stats",
+	"data": {
+		"switchWins": "15",
+		"switchLoss": "9",
+		"noSwitchWins": "4",
+		"noSwitchLoss": "10"
+	}
+}</pre>
+    </figure>
+    </div>
+
+  </section>
+
+
+</article>
+
+<div class="clearfix"></div>
+
+</div> <!-- end #content -->
+
+</body>
+
+
+</html>
