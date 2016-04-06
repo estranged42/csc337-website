@@ -1,0 +1,25 @@
+staff table
+
++-------+---------------+------+-----+---------+----------------+
+| Field | Type          | Null | Key | Default | Extra          |
++-------+---------------+------+-----+---------+----------------+
+| id    | int(11)       | NO   | PRI | NULL    | auto_increment |
+| name  | varchar(1024) | YES  |     | NULL    |                |
+| phone | varchar(1024) | YES  |     | NULL    |                |
+| email | varchar(1024) | YES  |     | NULL    |                |
++-------+---------------+------+-----+---------+----------------+
+
+
+mysql> select * from staff;
++----+----------+----------+----------------------------+
+| id | name     | phone    | email                      |
++----+----------+----------+----------------------------+
+| 1  | Mark     | 626-1541 | fischerm@email.arizona.edu |
+| 2  | Margrit  | 626-1541 | memcinto@email.arizona.edu |
+| 3  | Tracey   | 626-1541 | thummel@email.arizona.edu  |
+| 4  | Cindy    | 626-1541 | ccamp@email.arizona.edu    |
+| 5  | Jan      | 626-1541 | jknight@email.arizona.edu  |
+| 6  | Danielle | 626-1541 | danistil@email.arizona.edu |
+| 7  | Michael  | 626-1541 | martelle@email.arizona.edu |
++----+----------+----------+----------------------------+
+8 rows in set (0.01 sec)

@@ -1,0 +1,55 @@
+* Show staff list from last time
+
+* Show database query
+
+* Add input form to index.php
+
+* Show naive version of add.php INSERT statement
+
+* Add someone to the database
+
+* Talk about SQL injection
+
+* Show injection attack
+
+  ');delete from staff;--
+
+  ');delete from staff where name = 'Mark';--
+
+  ');INSERT INTO staff (name, phone, email) SELECT * FROM users;--
+
+* Talk about naive attemps at escaping SQL;
+
+* Talk about prepared statements
+
+* Talk about PDO
+
+* mysql_connect & mysql_query = doing it wrong
+
+* Show add02.php version with prepared statements
+
+* Demo failure to delete data
+
+* Talk about Cross Site Scripting attacks
+
+* Demo basic "alert" attack
+
+* Demo script inclusion
+
+  <script src="badstuff.js"></script>
+
+* Uncomment Injected Login Form
+
+* How to protect?
+
+* Output Escaping
+
+  htmlentities
+
+* Input filtering
+
+  filter_var($name, FILTER_UNSAFE_RAW, FILTER_FLAG_STRIP_LOW);
+  filter_var($phone, FILTER_SANITIZE_NUMBER_INT);
+  str_replace('-', '', $phone);  
+  filter_var($email, FILTER_VALIDATE_EMAIL);
+
