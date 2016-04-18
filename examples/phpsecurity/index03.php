@@ -29,15 +29,13 @@
 	</tr>
 	<?php foreach($people as $person): ?>
 	<tr>
-		<td><?php echo $person['name']; ?></td>
-		<td><?php echo $person['phone']; ?></td>
-		<td><?php echo $person['email']; ?></td>
+		<td><?php echo htmlentities($person['name']); ?></td>
+		<td><?php echo formatPhone(htmlentities($person['phone'])); ?></td>
+		<td><?php echo htmlentities($person['email']); ?></td>
 	</tr>
 	<?php endforeach; ?>
 	</table>
-	
-	<br/>
-	
+
 	<form action="add.php" method="POST">
 	  <table>
 	    <tr>

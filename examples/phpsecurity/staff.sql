@@ -7,7 +7,7 @@ CREATE TABLE `staff` (
   `phone` varchar(1024) default NULL,
   `email` varchar(1024) default NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 insert into `staff` values('1','Mark','626-1541','fischerm@email.arizona.edu'),
  ('2','Margrit','626-1541','memcinto@email.arizona.edu'),

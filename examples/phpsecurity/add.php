@@ -14,20 +14,14 @@
 	require 'db.php';
 	
   // Get the submitted form data
-  $name = filter_var($_REQUEST['name'], FILTER_UNSAFE_RAW, FILTER_FLAG_STRIP_LOW);
-  $phone = filter_var($_REQUEST['phone'], FILTER_SANITIZE_NUMBER_INT);
-  $phone = str_replace('-', '', $phone);
-  $email = filter_var($_REQUEST['email'], FILTER_VALIDATE_EMAIL);
-  $values = array(
-    ':name'  => $name,
-    ':phone' => $phone,
-    ':email' => $email
-  );
+  $name = $_REQUEST['name'];
+  $phone = $_REQUEST['phone'];
+  $email = $_REQUEST['email'];
 
   // Create our insert query
-  $sql = "INSERT INTO staff (name, phone, email) VALUES (:name, :phone, :email)";
-  $statement = $db->prepare($sql);
-  $statement->execute($values);
+  $sql = "INSERT INTO staff (name, phone, email) 
+          VALUES ('" . $name . "','" . $phone . "','" . $email . "')";
+  $db->query($sql);
 
 	?>
 	
