@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>CS 337 Web Programming - Homework Assignment 7</title>
+  <link rel="stylesheet" type="text/css" href="../document.css" />
+</head>
+
+<body>
+
+<div id="content">
+
+<h1>CS 337 - Web Programming - Homework Assignment 7</h1>
+
+<article>
+  <p>
+  This assignment is worth a total of 100 points.
+  </p>
+
+  <p>
+  This assignment will focus on the server side of an AJAX web application.
+  </p>
+  
+
+  <h3>Resource Files</h3>
+
+  <p>
+  The files you will need to complete this assignment are <a href="files">located in this files folder</a>.
+  </p>
+
+  <h3>API Documentation</h3>
+
+  <p>
+  The API documentation for the Monty Hall web service is here: <a href="api.html">API Documentation</a>. Reading and understanding this API will be critical to success in this assignment.
+  </p>
+</article>
+
+<article>
+  <h2>Problem 1: Monty Hall Server API (100 points)</h2>
+  
+  <p>
+    The final two assignments for the semester have you implement a client-server AJAX based web application to play the Monty Hall game. If you're not familiar with this problem, or want a deeper dive into it, see the WikiPedia article for it: <a href="https://en.wikipedia.org/wiki/Monty_Hall_problem">https://en.wikipedia.org/wiki/Monty_Hall_problem</a>.
+  </p>
+
+  <p>
+    The basics of the game work like this:
+    <ol>
+      <li>The Player is presented with 3 closed doors.  There is a prize behind one of the doors.
+      <li>The Player first selects one door, but does not open it.
+      <li>The Host then opens one of the doors the Player did not choose. The Host will <strong>always</strong> open a door with no prize behind it.
+      <li>The Player is then given a final choice: stick with the original door the player selected, or switch their choice to the other door that the Host did not open.
+      <li>Finally the Host reveals the door containing the prize, and the Player either wins or looses.
+    </ol>
+  </p>
+  
+  <p>
+    For this assignment you will create the server back-end API for the game. The server is responsible for setting up new games, storing game state in a MySQL database, and communicating results to the client.
+  </p>
+  
+  <h3>Minimum Requirements</h3>
+  
+  <p>
+    You will have to implement the four API functions described in the <a href="api.html">API Documentation</a>.
+  </p>
+  
+  <h4>Database</h4>
+  
+  <p>
+    You are provided with a SQL file in the files folder which contains the table definition to use for this assignment. You will need to create a new MySQL database, and import this table definition into your newly created database.  All data for the game will be stored and retrieved from this single table.
+  </p>
+  
+  <h4>JSON Output</h4>
+  
+  <p>
+    All commands in the API return data not as HTML, but as JSON. You will need to use PHP's header functionality to set the mime type of the return data stream to JSON, in order for clients to properly interpret the data. The response data structure will be mostly the same for valid results, with a different structure for errors. All responses must have either a 'message' value or an 'error' value.  Valid responses should also include a 'data' value with the data appropriate to that API command.
+  </p>
+  
+  <h4>newGame Command</h4>
+  
+  <p>
+    The newGame command is responsible for creating a new game entry in the database, and returning a game data structure to the client. The server picks a random door as the prize door, and stores this in the database in order to get a new Game ID.  The server returns a data structure as demonstrated in the <a href="api.html#newGame">API Documentation</a>.
+  </p>
+  
+  <p>
+    There shouldn't be any potential error states to handle with newGame.
+  </p>
+
+  <h4>stats Command</h4>
+  
+  <p>
+    The stats command is responsible for returning the number of current wins and losses broken down by if the player switched their door for the final choice, or stuck with their initial door.  You will need to figure out how to query the database to find each of the four possible combinations:
+  </p>
+    <ul>
+      <li>Player did not switch their choice between firstChoice and finalChoice, and the Player Won.
+      <li>Player did not switch their choice between firstChoice and finalChoice, and the Player Lost.
+      <li>Player DID switch their choice, and the Player Won.
+      <li>Player DID switch their choice, and the Player Lost.
+    </ul>
+    
+  <p>
+    The server returns a data structure as demonstrated in the <a href="api.html#stats">API Documentation</a>.
+  </p>
+  
+  <p>
+     There shouldn't be any potential error states to handle with the stats command.
+  </p>
+
+
+  <h4>firstChoice Command</h4>
+
+  <p>
+    The firstChoice command takes two arguments from the user in addition to the command name. You need a Game ID and a Choice.  The choice should be recorded in the database for the given Game ID. Once the player's choice has been recorded, the server must return a data response containing the incorrect door to open. The server must always return a door that does not hide the prize behind it.  The server returns a data structure as demonstrated in the <a href="api.html#firstChoice">API Documentation</a>.
+  </p>
+  
+  <p>
+    There are several potential error cases the server needs to handle as demonstrated in the <a href="api.html#firstChoice">API Documentation</a>.  Your implementation must implement the error cases identified in the documentation. You are free to implement additional error handling if you see an opportunity.
+  </p>
+
+
+  <h4>finalChoice Command</h4>
+
+  <p>
+    The finalChoice command takes two arguments from the user in addition to the command name. You need a Game ID and a Choice.  The player's final choice should be recorded in the database.  The server should then determine if the player won or lost the game, and return an appropriate message. This is the only command where the prize_door is returned, showing the player where the prize was all the time. The data returned is the same if they win or loose, the only difference is the message string.
+  </p>
+
+  <p>
+    There are several potential error cases the server needs to handle as demonstrated in the <a href="api.html#finalChoice">API Documentation</a>.  Your implementation must implement the error cases identified in the documentation. You are free to implement additional error handling if you see an opportunity.
+  </p>
+  
+</article>
+
+
+<article>
+  <h2>Homework Submission</h2>
+
+  <p>
+  You should create a folder holding your files, and zip it up for submission.  Name your folder and zip file something descriptive like <tt>Your-Name-HW7.zip</tt>. Please make a folder with your files in it, and zip up the folder. Do not select all the files and zip them up.  Your name is not Mark Fischer (that's my name!).  :)
+  </p>
+  
+  <h3>File List</h3>
+  <ul>
+    <li><tt>server.php</tt>
+  </ul>
+
+  <p>
+  Homeworks Zip files will be submitted to D2L, in the "Assignment 7" dropbox.
+  </p>
+  
+
+</article>
+
+<div class="clearfix"></div>
+
+</div> <!-- end #content -->
+
+</body>
+
+
+</html>
