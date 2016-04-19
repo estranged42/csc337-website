@@ -1,7 +1,7 @@
-DROP DATABASE IF EXISTS `hw6`;
-CREATE DATABASE `hw6`;
+DROP DATABASE IF EXISTS `hw7`;
+CREATE DATABASE `hw7`;
 
-USE `hw6`;
+USE `hw7`;
 
 CREATE TABLE `games` (
   `game_id`           int(11) NOT NULL auto_increment,
