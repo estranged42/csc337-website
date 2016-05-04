@@ -1,0 +1,139 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>CS 337 Final Exam Notes</title>
+	<link rel="stylesheet" type="text/css" href="document.css">
+	<script src=""></script>
+	<style>
+	  section {
+	    box-sizing: border-box;
+	    width: 50%;
+	    float: left;
+	  }
+	  heading {
+	    text-align: center;
+	  }
+	</style>
+
+  <script>
+    /*By JavaScript Kit
+    http://javascriptkit.com
+    Credit MUST stay intact for use
+    */
+
+    function show2(){
+      var thelement = document.getElementById("tick2")
+      var Digital=new Date()
+      var hours=Digital.getHours()
+      var minutes=Digital.getMinutes()
+      var seconds=Digital.getSeconds()
+      var dn="PM"
+      if (hours<12)
+      dn="AM"
+      if (hours>12)
+      hours=hours-12
+      if (hours==0)
+      hours=12
+      if (minutes<=9)
+      minutes="0"+minutes
+      if (seconds<=9)
+      seconds="0"+seconds
+      var ctime=hours+":"+minutes+":"+seconds+" "+dn
+      thelement.innerHTML="<b style='font-size:14;color:blue;'>"+ctime+"</b>"
+      setTimeout("show2()",1000)
+    }
+
+    window.addEventListener('load', show2);
+  </script>
+
+</head>
+
+<body>
+
+<div id="content">
+
+<heading>
+  <h1> Put Your Name AND UANetID on the Exam! &nbsp;&nbsp;&nbsp; <span id=tick2></span></h1>
+</heading>
+
+<section>
+  <pre>
+  Random Javascript Functions and Properties
+  ==========================================
+  window.addEventListener('eventName', callback);
+  window.alert('msg text');
+  window.close();
+  window.confirm('msg text');
+  
+  element.attributes
+  element.innerHTML
+  element.parentNode
+  element.style.propertyname = "newCSSvalue";
+  element.textContent  
+
+  element.appendChild(newElementObject);
+  element.classList.add("newClassName");
+  element.removeChild(elementToRemove);
+  
+  console.log(msg);
+  console.trace();
+  console.warn(msg);
+
+  document.body
+  document.title
+
+  document.createElement('elementType');
+  document.getElementsByClassName('className');
+  document.getElementsByTagName('tagName');
+  document.getElementById('idName');
+  </pre>
+</section>
+
+<section>
+  <pre>
+  Random PHP Functions
+  ====================
+  array_keys()
+  array_pop()
+  array_push()
+  array_shift()
+  echo
+  empty()
+  error_reporting()
+  fgets()
+  file_get_contents()
+  fopen()
+  gettype()
+  ini_set()
+  is_int()
+  is_numeric()
+  isset()
+  json_decode()
+  json_encode()
+  print_r()
+  printf()
+  sort()
+  strlen()
+  strtoupper()
+  time()
+  trim()
+  ucfirst()
+  var_dump()
+
+  Built-in Classes
+  ================
+  StdClass()
+  PDO()
+  $PDO->prepare()
+  $PDOStatement->execute()
+  $PDOStatement->fetchAll()
+  $PDOStatement->fetchObject()
+
+  </pre>
+</section>
+
+</div>
+
+</body>
+</html>
